@@ -4,7 +4,7 @@
 A power-station has a water reservoir that can be used to generate electricity. The water reservoir is filled by rain and it has a constant upstream water supply. 
 This means, if you do not adjust anything, the power-station will generate electricity at a constant rate of `20 MW`.
 The Water level in the reservoir is measured in meters and the power-station can generate electricity at a rate of `1 MW` for every `1 meter` of water in the reservoir.
-At the current moment the reservoir is `100 meters` and the upstream water supply provides `20 meters` of water every hour.
+At the current moment the reservoir is `100 meters` and the upstream water supply provides `30 meters` of water every hour.
 
 It is your job to adjust how much power the power-station produces every hour based on the water level in the reservoir. And it should be optimized in such a way that the power-station generates as much power as possible based on the data matrix provided in the `.csv` file.
 
@@ -47,17 +47,23 @@ For every hour you can adjust the power output levels 0-10 to meet the MW demand
 You can save water for a later hour, but you can not use more water than the reservoir can hold. The reservoir can hold `100 meters` of water.
 Given this matrix, what is the optimal power output levels for each hour to maximize the power generated?
 
-Example: at `00:00` you can choose to produce `40 MW` and draining `40 meters` of water from the reservoir. This will leave you with `60 meters` of water in the reservoir. But since the upstream fills the reservoir with `20 meters` every hour, you will have `80 meters` of water at `01:00`. This means you can produce `80 MW` at `01:00` and so on.
+Example: at `00:00` you can choose to produce `40 MW` and draining `40 meters` of water from the reservoir. This will leave you with `60 meters` of water in the reservoir. But since the upstream fills the reservoir with `30 meters` every hour, you will have `90 meters` of water at `01:00`. This means you can produce `90 MW` at `01:00` and so on.
 
 PS: You can drain the reservoir to `0 meters` if you want to, and optimally you should expect to have `0 meters` of water in the reservoir at `23:00`.
 
 Present your solution using code and explain your reasoning. We are looking for how you approach the problem and how you solve it, not just the solution itself.
 
+Example of unoptimized solution:
+```python
+power_levels = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10]
+```
+This gives a total of 10, but it is not optimal because you keep overflowing the reservoir and wasting resources.
+
+
 ## Part 2 Variables
 
-```NOTE
 In the future we want this task to account for variables in live weather data from yr.no. if it rains in the next 24 hours, this will change the upstream water amount positive.
-```
+
 Please explain how you would implement this in your solution. No code is needed for this part.
 
 ## Part 3 - Real data
