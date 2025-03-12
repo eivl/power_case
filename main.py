@@ -9,13 +9,14 @@ headers = {
 
 my_client = yr_weather.Locationforecast(headers=headers)
 
+oslo = 59.91, 10.75
 # Get air temperature in Oslo, Norway
-oslo_temp = my_client.get_air_temperature(59.91, 10.75)
+oslo_temp = my_client.get_air_temperature(*oslo)
 
 print(oslo_temp)
 
 # Get full forecast for Oslo, Norway
-forecast = my_client.get_forecast(59.91, 10.75)
+forecast = my_client.get_forecast(*oslo)
 
 # Select the forecast for the time right now (as it's possible to select a time further in the future)
 forecast_now = forecast.now()
