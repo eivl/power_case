@@ -58,7 +58,7 @@ Example of unoptimized solution:
 power_levels = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10]
 ```
 This gives a total of 10, but it is not optimal because you keep overflowing the reservoir and wasting resources.
-
+The `main.py` module has code and asserts to showcase valid and optimial solutions. You need to find any other or better.
 
 ## Part 2 Variables
 
@@ -69,4 +69,32 @@ Please explain how you would implement this in your solution. No code is needed 
 ## Part 3 - Real data
 
 This example is greatly simplified. The provided raw data is based on a real dataset, from one reactor, from one location during one day. Given that the real data is based on bid price, and not `MW` and `water in meters`, how would you change your approach.
+
+# Setup intructions.
+
+You need `uv` installed. 
+
+## macos and linux: 
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+
+## Windows
+```bash
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+## Better alternative with pipx or homebrew
+better alternative is to get it from pypi with `pipx`
+
+```bash
+pipx install uv
+```
+or
+```bash
+brew install uv
+```
+
+## Clone and install:
 
