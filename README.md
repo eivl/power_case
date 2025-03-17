@@ -98,3 +98,10 @@ brew install uv
 
 ## Clone and install:
 
+```bash
+git clone https://github.com/eivl/power_case.git
+cd power_case
+uv run main.py
+```
+
+Note: first time you run uv, it will install dependencies needed. you can also use any python tools you want to run the main file if you want to.
