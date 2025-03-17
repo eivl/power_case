@@ -8,3 +8,8 @@ dependencies = [
     "pandas>=2.2.3",
     "yr-weather>=0.4.0",
 ]
+
+[dependency-groups]
+dev = [
+    "black[d]>=25.1.0",
+]
